@@ -1,2 +1,25 @@
-'no pictures yet'
-<%= link_to 'add picture', new_post_path %>
+
+
+
+
+<% if @posts.any? %>
+  <% @posts.each do |post| %>
+    <article>
+      <div class="row">
+        
+        <% if post.picture != nil %>
+          <%= image_tag post.picture.url(:thumb) %>
+          <%= post.caption %>
+        <% end %>
+        
+        
+      </div>
+    </article>
+    <% end %>
+  <% else %>
+
+    no pictures yet
+
+  <% end %>
+
+  <%= link_to 'add picture', new_post_path %>
