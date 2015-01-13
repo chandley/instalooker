@@ -11,13 +11,13 @@ Then(/^I should see 'no pictures yet'$/) do
 end
 
 Given(/^I am on the homepage$/) do
-  step('I am on the homepage')
+  step('I visit the homepage')
 end
 
 When(/^I add a picture with a caption$/) do
-  click('add picture')
-  attach_file 'picture', Rails.root.join('features/images/cat.jpg')
-  fill_in('caption', with: "tiddles")
+  click_link('add picture')
+  attach_file 'Picture', Rails.root.join('features/images/cat.jpg')
+  fill_in('Caption', with: "tiddles")
   click_button('add picture')
 end
 
