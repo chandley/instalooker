@@ -18,7 +18,7 @@ Feature: Basic Navigation
     Then I should be greeted by name
 
     Scenario: Sign in
-    iven I am on the homepage as an anonymous visitor
+    Given I am on the homepage as an anonymous visitor
     When I sign in as an existing user
     Then I should be greeted by name
 
