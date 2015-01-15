@@ -1,8 +1,8 @@
 When(/^I add a tag to a picture$/) do
   click_link('tiddles')
   click_link('add tags')
-  fill_in('Tags', with: 'cat')
-  click_button('submit')
+  fill_in('Category', with: 'cat')
+  click_button('Create Tag')
 end
 
 Then(/^I should see the tag$/) do

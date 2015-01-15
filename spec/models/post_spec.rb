@@ -1,5 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Post, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Post do
+  it 'can have a caption' do
+    post = Post.new(caption: 'caption')
+    expect(post.caption).to eq('caption')
+  end
 end

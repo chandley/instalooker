@@ -9,4 +9,5 @@ class Post < ActiveRecord::Base
     }
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\z/
   
+  has_and_belongs_to_many :tags
 end
