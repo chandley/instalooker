@@ -10,6 +10,9 @@
         <% if post.picture != nil %>
           <%= image_tag post.picture.url(:thumb) %>
           <%= link_to "#{post.caption}", post_path(post) %>
+          <% post.tags.each do |tag| %>
+            <%= tag.category %>
+          <% end %>
         <% end %>
         
         
