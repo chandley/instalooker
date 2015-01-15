@@ -1,3 +1,4 @@
+<h1><%= @post.caption %></h1>
 <%= form_for [@post, @tag] do |f| %>
   <%= f.label :category %>
   <%= f.text_field :category %>
