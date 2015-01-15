@@ -24,3 +24,4 @@ end
 Then(/^I should see the picture on the homepage$/) do
   expect(page).to have_content('tiddles')
 end
+

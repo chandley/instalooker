@@ -46,3 +46,8 @@ Then(/^I should not be signed in$/) do
   expect(page).not_to have_content('test@example.com')
   expect(page).to have_content('Invalid email or password')
 end
+
+Given(/^I am a signed in user$/) do
+  visit('/')
+  step('I sign up')
+end

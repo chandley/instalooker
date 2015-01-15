@@ -18,4 +18,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(:caption, :picture)
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
 end
